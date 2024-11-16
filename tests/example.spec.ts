@@ -1,7 +1,9 @@
 import { test, expect } from '@playwright/test';
+import { log } from 'console';
 
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
+  console.log("The value is: " + process.env.PASSWORD);
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwrightbaba/);
